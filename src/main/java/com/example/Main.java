@@ -23,6 +23,7 @@ public class Main {
             System.out.println("7. Java 9 - Optional API Enhancements");
             System.out.println("8. Java 9 - Module System Demo");
             System.out.println("9. Java 9 - Process API Demo");
+            System.out.println("10. Java 10 - Var");
             System.out.println("0. Quitter");
 
             System.out.print("\nVotre choix: ");
@@ -55,6 +56,9 @@ public class Main {
                     break;
                 case "9":
                     runDemo("Démo Java 9 - Process API", "com.example.java9.ProcessApiDemo");
+                    break;
+                case "10":
+                    runDemo("Démo Java 10 - Var", "com.example.java10.VarDemo");
                     break;
                 case "0":
                     exit = true;
