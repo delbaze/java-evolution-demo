@@ -24,6 +24,8 @@ public class Main {
             System.out.println("8. Java 9 - Module System Demo");
             System.out.println("9. Java 9 - Process API Demo");
             System.out.println("10. Java 10 - Var");
+            System.out.println("11. Java 11 - String Enhancements");
+            System.out.println("12. Java 11 - Client HTTP");
             System.out.println("0. Quitter");
 
             System.out.print("\nVotre choix: ");
@@ -59,6 +61,12 @@ public class Main {
                     break;
                 case "10":
                     runDemo("Démo Java 10 - Var", "com.example.java10.VarDemo");
+                    break;
+                case "11":
+                    runDemo("Démo Java 11 - String Enhancements", "com.example.java11.StringMethodsDemo");
+                    break;
+                case "12":
+                    runDemo("Démo Java 11 - Client HTTP", "com.example.java11.HttpClientDemo");
                     break;
                 case "0":
                     exit = true;
