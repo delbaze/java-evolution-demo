@@ -1,3 +1,5 @@
+package com.example.java11;
+
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -6,6 +8,8 @@ import java.util.function.Function;
 public class LambdaVarDemo {
 
     public static void main(String[] args) {
+        System.out.println("Travaillez dans le fichier src/main/java/com/example/java11/LambdaVarDemo.java");
+
         List<String> names = List.of("Pierre", "Aurélien", "David");
 
         // TODO: Réécrivez ces lambdas en utilisant 'var'

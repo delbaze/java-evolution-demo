@@ -27,6 +27,13 @@ public class Main {
             System.out.println("11. Java 11 - String Enhancements");
             System.out.println("12. Java 11 - Client HTTP");
             System.out.println("13. Java 11 - Lambda var");
+            System.out.println("14. Java 12 - Switch avant Java 12");
+            System.out.println("15. Java 12 - Switch avec Java 12");
+            System.out.println("16. Java 13 - Switch avec Java 13");
+            System.out.println("17. Java 14 - Switch avec Java 14");
+            System.out.println("18. Java 12 - Blocs de chaines avant Java 13");
+            System.out.println("19. Java 13 - Blocs de chaines avec Java 13");
+            System.out.println("20. Java 14 - Blocs de chaines avec Java 14");
             System.out.println("0. Quitter");
 
             System.out.print("\nVotre choix: ");
@@ -71,6 +78,27 @@ public class Main {
                     break;
                 case "13":
                     runDemo("Démo Java 11 - Lambda var", "com.example.java11.LambdaVarDemo");
+                    break;
+                case "14":
+                    runDemo("Démo Java 12 - Switch avant Java 12", "com.example.java12.SwitchDemo");
+                    break;
+                case "15":
+                    runDemo("Démo Java 12 - Switch avec Java 12", "com.example.java12.SwitchDemo2");
+                    break;
+                case "16":
+                    runDemo("Démo Java 13 - Switch avec Java 13", "com.example.java13.SwitchDemo");
+                    break;
+                case "17":
+                    runDemo("Démo Java 14 - Switch avec Java 14", "com.example.java14.SwitchMonthDay");
+                    break;
+                case "18":
+                    runDemo("Démo Java 12 - Blocs de chaines avant Java 13", "com.example.java12.StringBeforeTextBlock");
+                    break;
+                case "19":
+                    runDemo("Démo Java 13 - Blocs de chaines avec Java 13", "com.example.java13.StringWithTextBlock");
+                    break;
+                case "20":
+                    runDemo("Démo Java 14 - Blocs de chaines avec Java 14", "com.example.java14.StringWithTextBlock");
                     break;
                 case "0":
                     exit = true;
