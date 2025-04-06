@@ -34,6 +34,11 @@ public class Main {
             System.out.println("18. Java 12 - Blocs de chaines avant Java 13");
             System.out.println("19. Java 13 - Blocs de chaines avec Java 13");
             System.out.println("20. Java 14 - Blocs de chaines avec Java 14");
+            System.out.println("21. Java 15 - Blocs de chaines avec Java 15");
+            System.out.println("22. Java 14 - Pattern Matching instanceof");
+            System.out.println("23. Java 15 - Pattern Matching instanceof (exo)");
+            System.out.println("24. Java 14 - Records");
+            System.out.println("25. Java 17 - Sealed Classes");
             System.out.println("0. Quitter");
 
             System.out.print("\nVotre choix: ");
@@ -99,6 +104,21 @@ public class Main {
                     break;
                 case "20":
                     runDemo("Démo Java 14 - Blocs de chaines avec Java 14", "com.example.java14.StringWithTextBlock");
+                    break;
+                case "21":
+                    runDemo("Démo Java 15 - Blocs de chaines avec Java 15", "com.example.java15.TextBlocks");
+                    break;
+                case "22":
+                    runDemo("Démo Java 14 - Pattern Matching instanceof", "com.example.java14.PatternMatching");
+                    break;
+                case "23":
+                    runDemo("Démo Java 15 - Pattern Matching instanceof (exo)", "com.example.java15.PatternMatching");
+                    break;
+                case "24":
+                    runDemo("Démo Java 14 - Records", "com.example.java14.Records");
+                    break;
+                case "25":
+                    runDemo("Démo Java 17 - Sealed Classes", "com.example.java17.SealedClasses");
                     break;
                 case "0":
                     exit = true;
