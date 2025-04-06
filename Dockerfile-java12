@@ -1,0 +1,11 @@
+FROM adoptopenjdk:12-jdk-hotspot
+
+WORKDIR /app
+COPY . /app
+
+# Compilation avec --enable-preview
+RUN mkdir -p target/classes && \
+    javac --enable-preview --release 12 -d target/classes $(find src/main/java -name "*.java")
+
+# Exécution avec --enable-preview
+CMD ["java", "--enable-preview", "-cp", "target/classes", "com.example.Main"]
