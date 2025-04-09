@@ -3,7 +3,6 @@ package com.example.java10;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Exercice sur var dans Java 10 
@@ -14,28 +13,29 @@ public class VarDemo {
     public static void main(String[] args) {
         System.out.println("Démarrage de l'exemple var de Java 10");
         
-        VarDemo demo = new VarDemo();
+        var demo = new VarDemo();
         demo.processInventory();
     }
     
     public void processInventory() {
-        List<Product> products = getProducts();
-        Map<String, List<Product>> productsByCategory = new HashMap<>();
+        var products = getProducts();
+        // List<Product> products = getProducts();
+        var productsByCategory = new HashMap<String, List<Product>>();
         
-        for (Product product : products) {
-            String category = product.getCategory();
+        for (var product : products) {
+            var category = product.getCategory();
             if (!productsByCategory.containsKey(category)) {
                 productsByCategory.put(category, new ArrayList<>());
             }
             productsByCategory.get(category).add(product);
         }
         
-        for (Map.Entry<String, List<Product>> entry : productsByCategory.entrySet()) {
-            String category = entry.getKey();
-            List<Product> categoryProducts = entry.getValue();
+        for (var entry : productsByCategory.entrySet()) {
+            var category = entry.getKey();
+            var categoryProducts = entry.getValue();
             double totalValue = 0.0;
             
-            for (Product product : categoryProducts) {
+            for (var product : categoryProducts) {
                 totalValue += product.getPrice();
             }
             
@@ -45,27 +45,27 @@ public class VarDemo {
     
     private List<Product> getProducts() {
         // Création de produits pour l'exemple
-        List<Product> products = new ArrayList<>();
+        var products = new ArrayList<Product>();
         
-        Product product1 = new Product();
+        var product1 = new Product();
         product1.setName("Laptop");
         product1.setCategory("Electronics");
         product1.setPrice(1200.0);
         products.add(product1);
         
-        Product product2 = new Product();
+        var product2 = new Product();
         product2.setName("Smartphone");
         product2.setCategory("Electronics");
         product2.setPrice(800.0);
         products.add(product2);
         
-        Product product3 = new Product();
+        var product3 = new Product();
         product3.setName("Table");
         product3.setCategory("Furniture");
         product3.setPrice(350.0);
         products.add(product3);
         
-        Product product4 = new Product();
+        var product4 = new Product();
         product4.setName("Chair");
         product4.setCategory("Furniture");
         product4.setPrice(150.0);

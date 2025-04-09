@@ -70,6 +70,9 @@ public class HttpClientDemo {
         // TODO: Créez une requête GET vers "https://jsonplaceholder.typicode.com/posts/1"
         // TODO: Envoyez la requête de manière synchrone et affichez le résultat
         // TODO: Envoyez la même requête de manière asynchrone
+        
         // Bonus: Envoyez plusieurs requêtes en parallèle et attendez que toutes soient terminées (en récupérant dynamiquement différents id de posts dans l'url : posts/1, posts/2, posts/3 par exemple)
+        //indices : utiliser CompletableFuture.allOf, join()
     }
 }
+//java.util.concurrent
