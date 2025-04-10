@@ -65,6 +65,21 @@ public class PatternMatching {
     // TODO: Implémentez cette méthode avec pattern matching
     static void processObjectsNewWay(List<Object> objects) {
         // Votre code ici
+        for (Object obj: objects) {
+            if (obj instanceof String s) {
+                System.out.println("String of length " + s.length() + ": " + s);
+            } else if (obj instanceof Integer i) {
+                System.out.println("Integer with value: " + i);
+            } else if (obj instanceof Double d) {
+                System.out.println("Double with value: " + d);
+            } else if (obj instanceof List<?> list) {
+                System.out.println("List with " + list.size() + " elements");
+            } else if (obj instanceof Map<?, ?> map) {
+                System.out.println("Map with " + map.size() + " entries");
+            } else {
+                System.out.println("Unknown type: " + obj.getClass().getName());
+            }
+        }
     }
     
     // Exercice 3: Utilisez pattern matching avec des conditions
@@ -88,6 +103,20 @@ public class PatternMatching {
             }
             
             // TODO: Refactorisez avec pattern matching
+        }
+    }
+
+    static void calculateAreas2(Shape[] shapes) {
+        for (Object shape : shapes) {
+            if (shape instanceof Circle c && c.radius > 5) {
+                System.out.println("Large circle with area: " + c.calculateArea());
+            } else if (shape instanceof Circle c) {
+                System.out.println("Small circle with area: " + c.calculateArea());
+            } else if (shape instanceof Rectangle r && r.width > r.height) {
+                System.out.println("Wide rectangle with area: " + r.calculateArea());
+            } else if (shape instanceof Rectangle r) {
+                System.out.println("Tall rectangle with area: " + r.calculateArea());
+            }
         }
     }
 }

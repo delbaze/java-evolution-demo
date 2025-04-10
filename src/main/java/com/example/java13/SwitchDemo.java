@@ -1,6 +1,11 @@
 package com.example.java13;
 
+import java.util.Map;
+import java.util.stream.Stream;
+
 public class SwitchDemo {
+
+    //switch expressions
     public static void main(String[] args) {
         String day = "WEDNESDAY"; // Vous pouvez changer cette valeur pour tester différents cas
 
@@ -9,7 +14,8 @@ public class SwitchDemo {
                 int heuresTravaillees = 8;
                 yield "Début de semaine avec " + heuresTravaillees + " heures de travail";
             }
-            case "FRIDAY" -> "Fin de semaine, enfin le repos !";
+            case "FRIDAY" ->
+                "Fin de semaine, enfin le repos !";
             case "WEDNESDAY" -> {
                 // Cas complexe avec plusieurs instructions
                 String messageBase = "Milieu de semaine";
@@ -38,6 +44,27 @@ public class SwitchDemo {
             }
         };
 
+        String dayDemo = "MONDAY";
+        String resultDemo = switch (dayDemo) {
+            case "MONDAY" ->
+                "Début de semaine";
+            case "FRIDAY" ->
+                "Fin de semaine";
+            default ->
+                "Milieu de semaine";
+        };
+
+        String dayDemo2 = "MONDAY";
+        String resultDemo2 = Stream.of(
+                Map.entry("MONDAY", "Début de semaine"),
+                Map.entry("FRIDAY", "Fin de semaine")
+        )
+                .filter(entry -> entry.getKey().equals(dayDemo2))
+                .map(Map.Entry::getValue)
+                .findFirst()
+                .orElse("Milieu de semaine");
+        System.out.println("Résultat2 : " + resultDemo2);
+        
         System.out.println("Résultat : " + result);
     }
 }
